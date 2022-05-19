@@ -1,4 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 namespace DataStructures
 {
     public class Program
@@ -8,7 +13,7 @@ namespace DataStructures
             Console.WriteLine(">>>>  Welcome to DataStructures Using Generics  <<<<");
             bool end = true;
             Console.WriteLine("1. Add Data\n2. In Reverse Data\n3. Insert Data\n4. Remove First Node Element\n5. Remove Last Node Element\n6. Search Node\n" +
-                "7. Insert New Data\n8. Delete Node At Particular Position\n9. Stack Push\nEnd Of Program ");
+                "7. Insert New Data\n8. Delete Node At Particular Position\n9. Stack Push\n10. StackBalance\nEnd Of Program ");
             while (end)
             {
                 DataStructure<string> structure = new DataStructure<string>();
@@ -83,6 +88,10 @@ namespace DataStructures
                         ordlist.Push(56);
                         ordlist.IsEmpty();
                         ordlist.Display();
+                        break;
+                    case 10:
+                        StackBalanceParentasis<int> balance=new StackBalanceParentasis<int>();
+                        balance.StackBalParentasis<int>();
                         break;
                     default:
                         end = false;
