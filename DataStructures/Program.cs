@@ -8,10 +8,11 @@ namespace DataStructures
             Console.WriteLine(">>>>  Welcome to DataStructures Using Generics  <<<<");
             bool end = true;
             Console.WriteLine("1. Add Data\n2. In Reverse Data\n3. Insert Data\n4. Remove First Node Element\n5. Remove Last Node Element\n6. Search Node\n" +
-                "7. Insert New Data\n8. Delete Node At Particular Position\nEnd Of Program ");
+                "7. Insert New Data\n8. Delete Node At Particular Position\n9. Stack Push\nEnd Of Program ");
             while (end)
             {
                 DataStructure<string> structure = new DataStructure<string>();
+                OrderedList<int> ordlist = new OrderedList<int>();
                 Console.WriteLine("Enter Option For Exicute The Program");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -77,11 +78,15 @@ namespace DataStructures
                         structure.Display();
                         break;
                     case 9:
-                        end = false;
-                        Console.WriteLine("Program Is Ended.");
+                        ordlist.Push(70);
+                        ordlist.Push(30);
+                        ordlist.Push(56);
+                        ordlist.IsEmpty();
+                        ordlist.Display();
                         break;
                     default:
-                        Console.WriteLine("Enter The Correct Option");
+                        end = false;
+                        Console.WriteLine("Program Is Ended.");
                         break;
                 }
             }
